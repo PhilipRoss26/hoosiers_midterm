@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Indiana Legends – Athletes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span>Indiana Legends</span>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="athletes.html" class="active">Athletes</a></li>
+        <li><a href="artists.html">Actors/Artists</a></li>
+        <li><a href="authors.html">Misc</a></li>
+        <li><a href="trip.html">Plan Your Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Hoosier Athletes</h1>
+    </section>
+
+    <section class="featured-person">
+      <article class="card featured-card">
+        <img src="images/athletes/larrybird.jpg" alt="Larry Bird" />
+        <div class="featured-content">
+          <h2>Larry Bird</h2>
+          <p>
+            Hall of Fame basketball player from West Baden Springs, Indiana. Most people know him from the Boston Celtics.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="flip-section">
+      <h2>More Hoosier Athletes</h2>
+      <div class="flip-grid">
+        <article class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/athletes/foley-mick-image.jpg" alt="Mick Foley" />
+              <h3>Mick Foley</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Professional wrestler who used a few different ring names.</p>
+              <p>Known for: Wrestling as Mankind, Cactus Jack, and Dude Love.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/athletes/Ray_Ewry_1908b.jpg" alt="Ray Ewry" />
+              <h3>Ray Ewry</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Track and field star from Lafayette, Indiana.</p>
+              <p>He did especially well in standing jump events in early Olympics.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/athletes/Rod_Woodson_Jan_2019.jpg" alt="Rod Woodson" />
+              <h3>Rod Woodson</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Defensive back from Fort Wayne, Indiana.</p>
+              <p>He later made the Pro Football Hall of Fame.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/athletes/Bob_Griese_with_soldier_CROP.jpg" alt="Bob Griese" />
+              <h3>Bob Griese</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Quarterback who played for Purdue and the Miami Dolphins.</p>
+              <p>Known for: Helping lead the Dolphins to two Super Bowl wins.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Feb 2026 Indiana Legends. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
+

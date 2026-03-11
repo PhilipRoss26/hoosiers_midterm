@@ -1,0 +1,496 @@
+:root {
+  --primary-color: #7a1705;
+  --primary-dark: #4c0f04;
+  --accent-color: #c21b2b;
+  --bg-color: #fdf5e6;
+  --text-color: #21130d;
+  --card-radius: 12px;
+  --shadow-soft: none;
+  --font-heading: "Poppins", system-ui, sans-serif;
+  --font-body: "Lato", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 6vw;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.logo i {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.2s ease;
+}
+
+.nav-links > li > a:hover::after,
+.nav-links > li > a.active::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 999px;
+}
+
+main {
+  padding: 2rem 6vw 3rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.hero-box {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.hero-text {
+  max-width: 40rem;
+}
+
+.hero-box h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 3.2vw, 3.3rem);
+  margin: 0 0 0.75rem;
+}
+
+.hero-box p {
+  margin: 0;
+  max-width: 34rem;
+}
+
+.hero-image-home {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-image-home img {
+  width: 100%;
+  max-width: 900px;
+  object-fit: cover;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background: #fff7bf;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--accent-color);
+  color: #000;
+}
+
+/* Row of four info boxes on home */
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  flex: 1 1 200px;
+  max-width: 260px;
+  border: 1px solid rgba(148, 27, 43, 0.2);
+  border-radius: var(--card-radius);
+  padding: 1.4rem 1.3rem;
+  text-align: center;
+  background: #fff9ed;
+  color: #21130d;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.info-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
+/* Wide text bar under info boxes */
+.home-summary {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: var(--card-radius);
+  padding: 1.5rem 1.25rem;
+  background: #fff5de;
+  color: #21130d;
+  text-align: center;
+}
+
+.home-summary p {
+  margin: 0;
+}
+
+.featured-person {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+  border: none;
+}
+
+.featured-card img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 15px;
+}
+
+.featured-content {
+  margin-top: 0.75rem;
+}
+
+/* Make all standard cards a consistent height in grids */
+.page-header h1 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.25rem;
+}
+
+.flip-section {
+  margin-top: 3rem;
+}
+
+/* Section labels above card groups */
+.flip-section > h2 {
+  display: inline-block;
+  margin: 0 auto 1.5rem;
+  padding: 0.4rem 1.2rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: 3px solid #7f102a;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+.flip-section {
+  text-align: center;
+}
+
+.flip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flip-card {
+  background: transparent;
+  flex: 1 1 260px;
+  max-width: 300px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(148, 27, 43, 0.3);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 0.6rem;
+}
+
+.flip-card-front {
+  background: #fff;
+}
+
+.flip-card-back {
+  background: var(--primary-color);
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a[href^="http"] {
+  color: #0a66c2;
+  text-decoration: underline;
+}
+
+img {
+  border-radius: 15px;
+}
+
+footer {
+  padding: 2rem 6vw 2.5rem;
+  background: #4c0f04;
+  color: #fce7f1;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.trip-form-section {
+  margin-top: 1.5rem;
+}
+
+.trip-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 1.5rem 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.trip-form label + input,
+.trip-form label + textarea,
+.trip-form label + select {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.6rem;
+}
+
+.trip-form input:focus,
+.trip-form textarea:focus,
+.trip-form select:focus {
+  border-color: var(--accent-color);
+  outline: 2px solid rgba(255, 215, 0, 0.55);
+}
+
+.submit-btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.nav-links > li > a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.highlights li:first-child {
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-text .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    padding-inline: 1.25rem;
+  }
+
+  main {
+    padding-inline: 1.25rem;
+  }
+
+  footer {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--primary-dark);
+    flex-direction: column;
+    padding: 0.75rem 1.5rem 1rem;
+    display: none;
+    min-width: 180px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .cards-grid,
+  .flip-grid,
+  .info-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-box,
+  .home-summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card,
+  .flip-card {
+    flex: 1 1 100%;
+  }
+
+  .flip-card {
+    width: 100%;
+  }
+}
+

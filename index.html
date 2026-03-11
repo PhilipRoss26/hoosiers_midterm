@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Indiana Legends – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span>Indiana Legends</span>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="athletes.html">Athletes</a></li>
+        <li><a href="artists.html">Actors/Artists</a></li>
+        <li><a href="authors.html">Misc</a></li>
+        <li><a href="trip.html">Plan Your Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-box">
+        <div class="hero-text">
+          <h1>Indiana Legends</h1>
+          <p>
+            This site is a small collection of people from Indiana with short notes about who they are.
+          </p>
+        </div>
+        <div class="hero-image-home">
+          <img src="images/indySKyline.jpg" alt="Indianapolis skyline at night" />
+        </div>
+      </div>
+    </section>
+
+    <section class="info-row">
+      <a class="info-card" href="athletes.html">
+        <h2>Athletes</h2>
+        <p>Some well known players and sports figures.</p>
+      </a>
+      <a class="info-card" href="artists.html">
+        <h2>Actors/Artists</h2>
+        <p>Actors, musicians, and other performers.</p>
+      </a>
+      <a class="info-card" href="authors.html">
+        <h2>Misc</h2>
+        <p>People that do not fit the other pages.</p>
+      </a>
+      <a class="info-card" href="trip.html">
+        <h2>Plan a Trip</h2>
+        <p>Very simple form to sketch a visit.</p>
+      </a>
+    </section>
+
+    <section class="home-summary">
+      <p>
+        The pages are not a full history lesson, but a basic starting point if you want to look up more
+        information on your own or think about places to visit.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Feb 2026 Indiana Legends. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
+
